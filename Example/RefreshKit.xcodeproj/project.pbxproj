@@ -15,6 +15,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		AE6EFBB0A92BC15962F3E153 /* Pods_RefreshKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF9DD43106A2AB05B2C9FD7 /* Pods_RefreshKit_Example.framework */; };
+		FC55905A1F7B4F7C00F72557 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5590591F7B4F7C00F72557 /* CustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,10 +30,10 @@
 
 /* Begin PBXFileReference section */
 		045F9A90C3B1746521591F3C /* Pods-RefreshKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RefreshKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-RefreshKit_Example/Pods-RefreshKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		1C6D8ED1C79583E8BCD04861 /* RefreshKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = RefreshKit.podspec; path = ../RefreshKit.podspec; sourceTree = "<group>"; };
-		2059528369F077D8ADF87275 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1C6D8ED1C79583E8BCD04861 /* RefreshKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RefreshKit.podspec; path = ../RefreshKit.podspec; sourceTree = "<group>"; };
+		2059528369F077D8ADF87275 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2BF9DD43106A2AB05B2C9FD7 /* Pods_RefreshKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RefreshKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DAF8CE59CAA24B73AA0B67B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4DAF8CE59CAA24B73AA0B67B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* RefreshKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RefreshKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		C92464AB26D388FC4D28EFDF /* Pods-RefreshKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RefreshKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RefreshKit_Tests/Pods-RefreshKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DB851AE744D18585E6113E90 /* Pods_RefreshKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RefreshKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02D959F02053D2FD2800609 /* Pods-RefreshKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RefreshKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RefreshKit_Example/Pods-RefreshKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		FC5590591F7B4F7C00F72557 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				FC5590591F7B4F7C00F72557 /* CustomView.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -361,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC55905A1F7B4F7C00F72557 /* CustomView.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
