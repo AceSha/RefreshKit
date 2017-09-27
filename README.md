@@ -5,6 +5,23 @@
 [![License](https://img.shields.io/cocoapods/l/RefreshKit.svg?style=flat)](http://cocoapods.org/pods/RefreshKit)
 [![Platform](https://img.shields.io/cocoapods/p/RefreshKit.svg?style=flat)](http://cocoapods.org/pods/RefreshKit)
 
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## Requirements
+
+swift 3.0, iOS 8.0+
+
+## Installation
+
+RefreshKit is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'RefreshKit'
+```
+
 ## Usage
 你可以简单的使用或者设置默认的刷新头（尾）如下
 
@@ -88,21 +105,6 @@ tableView.refresh
         .endRefreshingWithMessage(msg: "刷新失败😒", delay: 2)
         
 
-```
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-RefreshKit is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'RefreshKit'
 ```
 
 ## Author
