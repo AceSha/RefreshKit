@@ -31,6 +31,8 @@ class ViewController: UIViewController {
             .header
             .configure { h in
                 h.tintColorForDefaultRefreshView = .black
+                h.fireHeight = 80
+                h.dictForDefaultRefreshView = [:]
             }
             .addAction { [unowned self] in
                 self.db = 20
@@ -45,8 +47,11 @@ class ViewController: UIViewController {
 //            .addAction {
 //                print("refreshing")
 //        }
-//            
         
+        tableView.refresh
+        .header
+        .endRefreshingWithMessage(msg: "刷新失败😒", delay: 2)
+
         
         tableView.refresh
             .footer
