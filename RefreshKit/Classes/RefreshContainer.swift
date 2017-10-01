@@ -2,7 +2,7 @@
 //  RefreshContainer.swift
 //  RefreshKit
 //
-//  Created by sy on 2017/9/19.
+//  Created by pan on 2017/9/19.
 //  Copyright © 2017年 AceSha. All rights reserved.
 //
 
@@ -30,7 +30,7 @@ final public class RefreshContainer: UIView {
         }
     }
     
-
+    
     public var dictForDefaultRefreshView: [RefreshStateStringKey: String]? {
         willSet {
             guard let rf = refreshView as? DefaultRefreshView else {
@@ -53,7 +53,7 @@ final public class RefreshContainer: UIView {
     
     
     internal var action: action?
-
+    
     internal var state: RefreshState = .initial {
         didSet {
             refreshView?.animationForState(state: state)
@@ -113,10 +113,17 @@ final public class RefreshContainer: UIView {
             defaultInset = scrollView.contentInset
             defaultContentOffSet = scrollView.contentOffset
         }
+        
+        self.autoresizingMask = [
+            .flexibleLeftMargin,
+            .flexibleRightMargin,
+        ]
+        
     }
-
+    
     public override func addSubview(_ view: UIView) {
         super.addSubview(view)
+        
         if view is Refreshable {
             refreshView = view as? Refreshable
             
@@ -192,7 +199,6 @@ final public class RefreshContainer: UIView {
     
     private func animationToRefreshing() {
         guard let scrollView = superview as? UIScrollView else { return }
-        
         let inset = scrollView.contentInset
         var offset: CGFloat
         if type == .header {
@@ -201,8 +207,10 @@ final public class RefreshContainer: UIView {
             offset = scrollView.contentSize.height + fireHeight + inset.bottom - scrollView.bounds.height
         }
         
-        scrollView.setContentOffset(CGPoint(x: 0, y: offset), animated: true)
-    
+        UIView.animate(withDuration: 0.3) {
+            scrollView.contentInset = UIEdgeInsets(top: -offset, left: 0, bottom: 0, right: 0)
+        }
+        
     }
     
     private func endAnimation() {
