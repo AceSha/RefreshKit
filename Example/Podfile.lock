@@ -1,16 +1,19 @@
 PODS:
-  - RefreshKit (0.1.0)
+  - RefreshKit (0.0.1)
+  - SwiftLint (0.22.0)
 
 DEPENDENCIES:
   - RefreshKit (from `../`)
+  - SwiftLint
 
 EXTERNAL SOURCES:
   RefreshKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  RefreshKit: d39f952e8d0081f51dbd99af76507fc3130c5f1b
+  RefreshKit: 0c4ce8453f7e341c3affe7e298c596908f61d229
+  SwiftLint: 1134786caedd2caab0560d2f36b76414a5a56808
 
-PODFILE CHECKSUM: 1dd317f770f668f4c0e2272c58764a8b588a135f
+PODFILE CHECKSUM: 256f4856462251bcc58fd96996eadbccfbd7d470
 
 COCOAPODS: 1.2.1.beta.1

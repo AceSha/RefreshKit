@@ -1,7 +1,9 @@
 use_frameworks!
+platform :ios, '8.3'
 
 target 'RefreshKit_Example' do
   pod 'RefreshKit', :path => '../'
+  pod 'SwiftLint'
 
   target 'RefreshKit_Tests' do
     inherit! :search_paths

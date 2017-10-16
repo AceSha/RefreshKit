@@ -12,18 +12,18 @@ import RefreshKit
 class ViewController: UIViewController {
 
     let tableView = UITableView()
-    
+
     var db: Int = 20
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         view.addSubview(tableView)
         tableView.frame = view.bounds
         tableView.dataSource = self
         tableView.delegate = self
         tableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
-        
+
         self.navigationController?.navigationBar.isTranslucent = true
         self.automaticallyAdjustsScrollViewInsets = false
         // 普通
@@ -51,7 +51,6 @@ class ViewController: UIViewController {
 //        .header
 //        .endRefreshingWithMessage(msg: "刷新失败😒", delay: 2)
 
-        
         tableView.refresh
             .footer
             .addAction { [unowned self] in
@@ -60,7 +59,7 @@ class ViewController: UIViewController {
                     self.tableView.reloadData()
                     self.tableView.refresh.footer.endRefreshing()
                 })
-                
+
         }
 
     }
@@ -68,7 +67,7 @@ class ViewController: UIViewController {
     @IBAction func beginRefreshing(_ sender: Any) {
         tableView.refresh.header.beginRefreshing()
     }
-   
+
     @IBAction func endRefreshing(_ sender: Any) {
         // 普通结束
 //        tableView.refresh.header.endRefreshing()
@@ -85,7 +84,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return db
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // I'm lazy :)
         let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
@@ -93,4 +92,3 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 }
-

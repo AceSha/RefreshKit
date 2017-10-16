@@ -1,6 +1,6 @@
 import UIKit
 import XCTest
-import RefreshKit
+//import RefreshKit
 
 class Tests: XCTestCase {
     
