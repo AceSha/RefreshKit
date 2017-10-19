@@ -17,15 +17,19 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+            tableView.contentInset = UIEdgeInsets(top: 88, left: 0, bottom: 0, right: 0)
+        } else {
+            automaticallyAdjustsScrollViewInsets = false
+            tableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
+        }
         view.addSubview(tableView)
         tableView.frame = view.bounds
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
 
         self.navigationController?.navigationBar.isTranslucent = true
-        self.automaticallyAdjustsScrollViewInsets = false
         // 普通
         tableView.refresh
             .header
